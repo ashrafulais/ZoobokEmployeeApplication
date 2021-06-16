@@ -1,6 +1,7 @@
 ## Steps
+Fetch dependencies
+Apply the migration
 Run the project
-
 Go to this link to test: http://localhost:15641/swagger/index.html
 
 ### Task instruction
