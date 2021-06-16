@@ -9,8 +9,8 @@ using System.Threading.Tasks;
 
 namespace EmployeeApplication.API.Controllers
 {
+    [Route("api/[controller]")]
     [ApiController]
-    [Route("[controller]")]
     public class EmployeeController : Controller
     {
         public IEmployeeService _employeeService;
@@ -25,7 +25,7 @@ namespace EmployeeApplication.API.Controllers
             return Ok("test successful");
         }
 
-        [HttpGet("getinfo/{id}")]
+        [HttpGet("{id}")]
         public IActionResult Get(int id)
         {
             try
@@ -39,8 +39,8 @@ namespace EmployeeApplication.API.Controllers
             }
         }
 
-        [HttpPost("insert")]
-        public IActionResult Create([FromBody]Employee employee)
+        [HttpPost]
+        public IActionResult Create([FromBody] Employee employee)
         {
             try
             {

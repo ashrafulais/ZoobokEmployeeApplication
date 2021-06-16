@@ -62,7 +62,6 @@ namespace EmployeeApplication.API.Services
         {
             try
             {
-                employee = _employeeRepository.GetEmployee(employee.Id);
                 return _employeeRepository.InsertEmployee(employee);
             }
             catch (Exception ex)
